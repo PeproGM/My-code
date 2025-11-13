@@ -1,0 +1,148 @@
+/* ===== Общий стиль ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #121218);
+  color: #eaeaea;
+}
+
+/*  Шапка  */
+header {
+  background: #2a2a3b;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #4da3ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #82c7ff;
+}
+
+/*  Контент */
+main {
+  padding: 20px;
+  min-height: 400px;
+  background: #2a2a3b;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/*  Футер  */
+footer {
+  background: #2a2a3b;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*  Боковая шторка  */
+.settings-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: #2a2a3b;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 1001;
+}
+
+.settings-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Заголовок шторки */
+.settings-header {
+  margin-bottom: 20px;
+}
+
+.settings-header h2 {
+  margin: 0;
+}
+
+/* Ссылки внутри панели */
+.settings-content a {
+  display: block;
+  padding: 10px 0;
+  color: #4da3ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.settings-content a:hover {
+  color: #82c7ff;
+}
+
+/*  Оверлей  */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Кнопка настроек ===== */
+.settings-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4da3ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.settings-btn:hover {
+  background: #82c7ff;
+}
+
+.settings-btn.active {
+  transform: rotate(90deg);
+}
