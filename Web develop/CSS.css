@@ -1,0 +1,190 @@
+:root {
+  --bg-1: #1e1e2f;
+  --bg-2: #121218;
+  --card: #2a2a3b;
+  --panel-bg: #1c1c2a;
+  --accent: #4da3ff;
+  --accent-light: #82c7ff;
+  --muted: #cfe9ff;
+  --positive: #4da3ff;
+  --negative: #ff6b6b;
+  --text-primary: #eaeaea;
+  --text-secondary: #b0b0b0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(77, 163, 255, 0.06),
+      transparent
+    ),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.7);
+  animation: floatIn 0.6s cubic-bezier(0.2, 0.9, 0.3, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* HEADER */
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: var(--bg-2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand__title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.brand__subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* PANEL */
+.panel {
+  background: var(--panel-bg);
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.4);
+  overflow: hidden;
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.panel h3 {
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.panel .content {
+  max-height: 450px; /* Ограничение высоты для длинного текста */
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.panel .content p,
+.panel .content li {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.panel ul,
+.panel ol {
+  padding-left: 20px;
+}
+
+.panel ol {
+  margin-bottom: 12px;
+}
+
+/* КНОПКИ */
+button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(77, 163, 255, 0.3);
+  color: var(--bg-2);
+}
+
+.go-hub {
+  background: linear-gradient(135deg, #4da3ff, #82c7ff);
+}
+
+.go-test {
+  background: linear-gradient(135deg, #82c7ff, #4da3ff);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(77, 163, 255, 0.5);
+}
+
+button.disabled {
+  background: rgba(130, 199, 255, 0.3);
+  cursor: not-allowed;
+  box-shadow: none;
+  color: var(--text-secondary);
+}
+
+/* SCROLLBAR для длинных панелей */
+.panel .content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.panel .content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+}
+
+.panel .content::-webkit-scrollbar-thumb {
+  background: rgba(77, 163, 255, 0.4);
+  border-radius: 4px;
+}

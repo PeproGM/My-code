@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Питання -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="а">
+            Яка головна мета стягнення податків державою?
+            <ul>
+              <li data-option="а">Дохід бюджету</li>
+              <li data-option="б">Регулювання цін</li>
+              <li data-option="в">Сплата акцизу</li>
+              <li data-option="г">Повернення кредитів</li>
+            </ul>
+          </li>
+          <li data-answer="г">
+            Який із перелічених податків є прикладом податку на споживання?
+            <ul>
+              <li data-option="а">Військовий збір</li>
+              <li data-option="б">Податок за користування великим будинком</li>
+              <li data-option="в">Податок на доходи фізичних осіб (ПДФО)</li>
+              <li data-option="г">Податок на додану вартість (ПДВ)</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Як називається додатковий податок, який стягується державою на
+            товари, що привезли з-за кордону?
+            <ul>
+              <li data-option="а">Акциз</li>
+              <li data-option="б">ПДФО</li>
+              <li data-option="в">Мито</li>
+              <li data-option="г">Податок на додану вартість</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що таке додана вартість товару?
+            <ul>
+              <li data-option="а">Фіксована ціна, встановлена державою</li>
+              <li data-option="б">Сума, яку сплачують як військовий збір</li>
+              <li data-option="в">
+                Вартість, яка додається до вартості товару на кожному етапі його
+                виробництва та руху
+              </li>
+              <li data-option="г">Розмір знижки для споживача</li>
+            </ul>
+          </li>
+          <li data-answer="г">
+            Який із перелічених податків в Україні є додатковим тимчасовим
+            податком і стягується у розмірі 1,5% (згідно з даними тексту)?
+            <ul>
+              <li data-option="а">Податок на доходи фізичних осіб (ПДФО)</li>
+              <li data-option="б">Акциз</li>
+              <li data-option="в">Мито</li>
+              <li data-option="г">Військовий збір</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

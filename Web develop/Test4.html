@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Питання -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="г">
+            Як називається процес використання речей (товарів) та послуг, якими
+            людина постійно користується для задоволення своїх потреб?
+            <ul>
+              <li data-option="а">Видатки</li>
+              <li data-option="б">Блага</li>
+              <li data-option="в">Інвестиція</li>
+              <li data-option="г">Споживання</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Який термін позначає сукупність платежів, які здійснюють члени сім’ї
+            з метою придбання благ, сплати податків, повернення кредитів тощо?
+            <ul>
+              <li data-option="а">Грошові надходження</li>
+              <li data-option="б">Фінансові цілі</li>
+              <li data-option="в">Видатки сім’ї</li>
+              <li data-option="г">Споживчий кошик</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Який вид видатків пов’язаний із придбанням благ, які є бажаними, але
+            не є критично необхідними для забезпечення існування сім’ї?
+            <ul>
+              <li data-option="а">Обов’язкові</li>
+              <li data-option="б">Необов’язкові (другорядні)</li>
+              <li data-option="в">Інвестиційні</li>
+              <li data-option="г">Капітальні</li>
+            </ul>
+          </li>
+          <li data-answer="а">
+            Що з переліченого є чинником, який впливає на витрачання грошей?
+            <ul>
+              <li data-option="а">Реклама</li>
+              <li data-option="б">Рівень освіти</li>
+              <li data-option="в">Стан здоров'я</li>
+              <li data-option="г">Підприємницький хист</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Як називається економічне явище, що характеризується зростанням
+            рівня (приростом) цін на товари та послуги впродовж певного періоду?
+            <ul>
+              <li data-option="а">Дефляція</li>
+              <li data-option="б">Рецесія</li>
+              <li data-option="в">Інфляція</li>
+              <li data-option="г">Девальвація</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Питання -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="б">
+            Яка основна ознака, що відрізняє банк від небанківської фінансової
+            установи?
+            <ul>
+              <li data-option="а">Право надавати кредити</li>
+              <li data-option="б">
+                Право залучати вклади від фізичних і юридичних осіб та
+                розміщувати їх на власний ризик
+              </li>
+              <li data-option="в">Право здійснювати обмін валют</li>
+              <li data-option="г">Право відкривати сейфи</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Який рівень дворівневої банківської системи України безпосередньо
+            працює з фізичними та юридичними особами?
+            <ul>
+              <li data-option="а">Нульовий рівень</li>
+              <li data-option="б">Другий рівень (комерційні банки)</li>
+              <li data-option="в">Перший рівень (центральний банк)</li>
+              <li data-option="г">Рівень фінансових регуляторів</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Який з перелічених факторів є важливим критерієм при виборі банку?
+            <ul>
+              <li data-option="а">Розмір Військового збору</li>
+              <li data-option="б">Ліквідність активів банку</li>
+              <li data-option="в">Наявність фінансового продукту</li>
+              <li data-option="г">Різноманітність нематеріальних ресурсів</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Для якої основної мети банки відкривають клієнтам поточний рахунок?
+            <ul>
+              <li data-option="а">Для отримання прибутку від інвестицій</li>
+              <li data-option="б">Для зберігання цінностей у сейфі</li>
+              <li data-option="в">
+                Для здійснення розрахунково-касових операцій (переказу коштів та
+                приймання/видачі готівки)
+              </li>
+              <li data-option="г">Для оформлення кредиту під заставу</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Що з переліченого належить до основних видів банківських послуг?
+            <ul>
+              <li data-option="а">Запобігання відмиванню коштів</li>
+              <li data-option="б">Надання кредитів</li>
+              <li data-option="в">Регулювання фінансових ринків</li>
+              <li data-option="г">
+                Стягнення податку на доходи фізичних осіб (ПДФО)
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

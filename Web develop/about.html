@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Графіки</title>
+    <link rel="stylesheet" href="about.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Графіки</h1>
+    </header>
+
+    <main>
+      <div class="chart-container fade-element">
+        <canvas id="financeChart"></canvas>
+      </div>
+
+      <div class="stat-block fade-element">
+        <div>Загальні витрати:</div>
+        <span id="totalExpenses">0</span>
+      </div>
+      <div class="stat-block fade-element">
+        <div>Загальні доходи:</div>
+        <span id="totalIncome">0</span>
+      </div>
+      <div class="stat-block fade-element">
+        <div>Рахунок:</div>
+        <span id="balance">0</span>
+      </div>
+
+      <button id="backBtn" class="fade-element">Повернутись</button>
+    </main>
+
+    <footer></footer>
+
+    <script src="about.js"></script>
+  </body>
+</html>

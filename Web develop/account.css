@@ -1,0 +1,469 @@
+:root {
+  --bg-1: #1e1e2f;
+  --bg-2: #121218;
+  --card: #2a2a3b;
+  --accent: #4da3ff;
+  --accent-light: #82c7ff;
+  --muted: #cfe9ff;
+  --panel-bg: #1c1c2a;
+  --positive: #4da3ff;
+  --negative: #ff6b6b;
+  --text-primary: #eaeaea;
+  --text-secondary: #b0b0b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  min-height: 100vh;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.account-header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(40, 40, 40, 0.95);
+  border-bottom: 1px solid #333;
+}
+
+.back-btn,
+.logout-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.back-btn {
+  background: var(--card);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-btn:hover {
+  background: #3d3d3d;
+  border-color: var(--accent);
+}
+
+.logout-btn {
+  background: var(--negative);
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #ff5252;
+  transform: translateY(-1px);
+}
+
+.top-text {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--card);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-text h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.account-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.account-container {
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Стилі для профілю */
+.profile-section {
+  padding: 40px;
+  background: linear-gradient(135deg, var(--card), var(--panel-bg));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.profile-avatar {
+  font-size: 3.5em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--accent);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 1.8em;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.profile-email {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+.profile-status {
+  background: rgba(77, 163, 255, 0.2);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  display: inline-block;
+  border: 1px solid rgba(77, 163, 255, 0.3);
+}
+
+.edit-profile-btn {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.edit-profile-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(77, 163, 255, 0.4);
+}
+
+/* Стилі для статистики */
+.stats-section {
+  padding: 40px;
+  background: var(--card);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-section h3 {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  color: var(--accent);
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-icon {
+  font-size: 2.2em;
+  opacity: 0.9;
+}
+
+.stat-info {
+  flex-grow: 1;
+}
+
+.stat-value {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  font-family: "Courier New", monospace;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Стилі для налаштувань */
+.settings-section {
+  padding: 40px;
+  background: var(--card);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-section h3 {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  color: var(--accent);
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.setting-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.setting-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+}
+
+.setting-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.setting-icon {
+  font-size: 1.4em;
+  opacity: 0.8;
+}
+
+.setting-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  font-size: 1em;
+}
+
+.setting-desc {
+  color: var(--text-secondary);
+  font-size: 0.85em;
+}
+
+.setting-action {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.setting-action:hover {
+  background: var(--accent-light);
+  transform: scale(1.05);
+}
+
+/* Стилі для керування даними */
+.data-section {
+  padding: 40px;
+  background: var(--card);
+}
+
+.data-section h3 {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  color: var(--accent);
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+}
+
+.data-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.data-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.export-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.export-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(77, 163, 255, 0.4);
+}
+
+.import-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.import-btn:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.clear-btn {
+  background: var(--negative);
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-btn {
+    width: 200px;
+    justify-content: center;
+  }
+
+  .account-header-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .setting-action {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Додаткові стилі для покращення читабельності */
+.stat-card:nth-child(2) {
+  border-left-color: #2196f3;
+}
+
+.stat-card:nth-child(3) {
+  border-left-color: #ff9800;
+}
+
+/* Покращення контрастності для доступності */
+button:focus,
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Стилі для тексту в темній темі */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}

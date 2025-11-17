@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Питання -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="в">
+            Який вид страхування дозволяє застрахувати свою власність від
+            випадкових, незвичайних, але неприємних подій (страхових ризиків)?
+            <ul>
+              <li data-option="а">Особисте страхування</li>
+              <li data-option="б">Страхування відповідальності</li>
+              <li data-option="в">Страхування майна</li>
+              <li data-option="г">Добровільне медичне страхування</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Який вид страхування корисний для тих, хто бажає матеріально
+            забезпечити себе після досягнення похилого віку або убезпечити
+            матеріально залежних близьких людей на випадок своєї смерті?
+            <ul>
+              <li data-option="а">Страхування відповідальності</li>
+              <li data-option="б">Страхування життя</li>
+              <li data-option="в">Страхування майна</li>
+              <li data-option="г">Добровільне медичне страхування</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Який вид страхування є підвидом особистого страхування, за якого
+            страховик компенсує застрахованій особі витрати на послуги медичних
+            установ?
+            <ul>
+              <li data-option="а">Страхування життя</li>
+              <li data-option="б">Страхування відповідальності</li>
+              <li data-option="в">Добровільне медичне страхування (ДМС)</li>
+              <li data-option="г">Страхування майна</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що з переліченого є метою страхування відповідальності?
+            <ul>
+              <li data-option="а">
+                Забезпечити себе після досягнення похилого віку
+              </li>
+              <li data-option="б">Компенсувати витрати на медичні послуги</li>
+              <li data-option="в">
+                Забезпечити відшкодування постраждалим збитків, завданих діями
+                третіх осіб
+              </li>
+              <li data-option="г">
+                Застрахувати свою власність від неприємних подій
+              </li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            До якого широкого виду страхування належить страхування від
+            тимчасової чи повної втрати працездатності?
+            <ul>
+              <li data-option="а">Страхування майна</li>
+              <li data-option="б">Особисте страхування</li>
+              <li data-option="в">Страхування відповідальності</li>
+              <li data-option="г">Добровільне страхування</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

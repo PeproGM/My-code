@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Вопросы -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="в">
+            Яким терміном позначають гроші, що не мають внутрішньої вартості і
+            забезпечені лише довірою до держави?
+            <ul>
+              <li data-option="а">Товарні гроші</li>
+              <li data-option="б">Металеві гроші</li>
+              <li data-option="в">Фіатні гроші</li>
+              <li data-option="г">Електронні гроші</li>
+              <li data-option="д">Приватні гроші</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Чому люди готові приймати фіатні гроші як оплату:
+            <ul>
+              <li data-option="а">їх можна обміняти на золото</li>
+              <li data-option="б">зручно обмінюватися</li>
+              <li data-option="в">гроші гарантує держава</li>
+              <li data-option="г">тому що вони не можуть знецінитися</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Що таке номінальна вартість грошей:
+            <ul>
+              <li data-option="а">обмін на товар</li>
+              <li data-option="б">вказана на банкноті або монеті</li>
+              <li data-option="в">мінімальна вартість золота</li>
+              <li data-option="г">підтверджується дорогоцінним металом</li>
+            </ul>
+          </li>
+          <li data-answer="г">
+            Що не можна вважати фіатними грошима:
+            <ul>
+              <li data-option="а">банкноти</li>
+              <li data-option="б">монети</li>
+              <li data-option="в">електронні гроші</li>
+              <li data-option="г">криптовалюти</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Яку функцію виконують гроші, коли ви бачите цінник на товарі:
+            <ul>
+              <li data-option="а">засіб обігу</li>
+              <li data-option="б">засіб нагромадження</li>
+              <li data-option="в">міра вартості</li>
+              <li data-option="г">засіб платежу</li>
+              <li data-option="д">світові гроші</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+/* Основной фон страницы */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(145deg, #1b1c2b, #171729);
+  color: #e0e7ff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Хедер */
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #1c1c35;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Основной контейнер */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #7da7ff;
+}
+
+/* Контейнер для графика */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: #1c1c35;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Статистика под графиком */
+.stat-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  background: #1c1c35;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+.stat-block span {
+  font-weight: bold;
+  color: #7da7ff;
+}
+
+/* Кнопка назад */
+#backBtn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 16px;
+  background: #3a86ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#backBtn:hover {
+  background: #265df2;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Анимация плавного появления */
+.fade-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

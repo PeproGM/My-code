@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Вопросы -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="в">
+            Який термін означає ціль, досягнення якої обов'язково вимагає витрат
+            грошей?
+            <ul>
+              <li data-option="а">Інвестиційна ціль</li>
+              <li data-option="б">Життєва ціль</li>
+              <li data-option="в">Фінансова ціль</li>
+              <li data-option="г">Нематеріальна ціль</li>
+            </ul>
+          </li>
+          <li data-answer="г">
+            Який елемент фінансового стану людини або сім'ї позначає те, що вони
+            комусь заборгували?
+            <ul>
+              <li data-option="а">Активи</li>
+              <li data-option="б">Надходження</li>
+              <li data-option="в">Ліквідність</li>
+              <li data-option="г">Пасиви</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Який процес необхідний для розуміння, скільки грошей людина або
+            сім'я заробляє, як швидко та на що їх витрачає?
+            <ul>
+              <li data-option="а">Фінансове планування</li>
+              <li data-option="б">Управління зовнішніми ризиками</li>
+              <li data-option="в">Оцінка поточних надходжень і видатків</li>
+              <li data-option="г">Оцінка нематеріальних ресурсів</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Який вид ресурсів може принести фінансову вигоду в майбутньому,
+            включаючи вищу освіту та знання іноземних мов?
+            <ul>
+              <li data-option="а">Грошові потоки</li>
+              <li data-option="б">Пенсійні накопичення</li>
+              <li data-option="в">Нематеріальні ресурси</li>
+              <li data-option="г">Інвестиції</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Що з переліченого є однією з важливих складових добре продуманого
+            фінансового плану?
+            <ul>
+              <li data-option="а">Визначення фіатних грошей</li>
+              <li data-option="б">
+                Управління грошовими потоками (управління ліквідністю)
+              </li>
+              <li data-option="в">Складання декларації про доходи</li>
+              <li data-option="г">Обов'язкове інвестування в цінні папери</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

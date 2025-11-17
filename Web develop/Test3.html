@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Вопроси -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="в">
+            Який вид грошових надходжень людина отримує в результаті своєї
+            економічної діяльності, взамін своєї праці або підприємницького
+            хисту?
+            <ul>
+              <li data-option="а">Соціальні доходи</li>
+              <li data-option="б">Доходи від власності</li>
+              <li data-option="в">Трудові надходження</li>
+              <li data-option="г">Пасивні доходи</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            До якого виду надходжень відносяться доходи від власності та
+            соціальні доходи (наприклад, пенсія), які сім’я може отримувати без
+            витрат праці?
+            <ul>
+              <li data-option="а">Активні надходження</li>
+              <li data-option="б">Нетрудові надходження</li>
+              <li data-option="в">Винагороди</li>
+              <li data-option="г">Підприємницький дохід</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що з переліченого є прикладом трудових надходжень?
+            <ul>
+              <li data-option="а">Дохід від здачі квартири в оренду</li>
+              <li data-option="б">Стипендія</li>
+              <li data-option="в">Заробітна плата</li>
+              <li data-option="г">Спадщина</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що з переліченого першочергово впливатиме на розмір трудових
+            надходжень?
+            <ul>
+              <li data-option="а">Зміна ринкової вартості рухомого майна</li>
+              <li data-option="б">Зміна системи пенсійного забезпечення</li>
+              <li data-option="в">
+                Рівень освіти, досвіду, набутих практичних знань і навичок
+              </li>
+              <li data-option="г">
+                Зміна системи оподаткування пасивних доходів
+              </li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Який фактор може вплинути на розмір нетрудових надходжень сім'ї?
+            <ul>
+              <li data-option="а">Попит на продукцію та послуги фрілансера</li>
+              <li data-option="б">
+                Можливість працевлаштування одночасно в декількох компаніях
+              </li>
+              <li data-option="в">
+                Зміна ринкової вартості нерухомого майна (активів)
+              </li>
+              <li data-option="г">
+                Вік, стан здоров’я та працездатності членів сім’ї
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

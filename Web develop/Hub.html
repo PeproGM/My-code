@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Матеріали Хаб</title>
+    <link rel="stylesheet" href="Hub.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">MH</div>
+          <div>
+            <h1 class="brand__title">Матеріали Хаб</h1>
+            <p class="brand__subtitle">Панель матеріалів</p>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="go-main">Назад на Main</button>
+        </div>
+      </header>
+
+      <!-- Прогресс пользователя -->
+      <div class="user-progress">
+        <div class="level-text">Рівень: 0, досвід: 0/10</div>
+        <div class="level-progress-wrapper">
+          <div class="level-progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <nav class="panel__nav">
+          <button class="chip active">Пройдені</button>
+          <button class="chip">Непройдені</button>
+        </nav>
+      </div>
+
+      <div class="grid" id="materials-grid">
+        <!-- Карточки будут генерироваться через JS -->
+      </div>
+    </div>
+
+    <script src="Hub.js" defer></script>
+  </body>
+</html>

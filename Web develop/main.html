@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Фінансовий Трекер</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./combined.css" />
+  </head>
+  <body>
+    <!-- Кнопки налаштувань та акаунту -->
+    <button id="settingsBtn" class="settings-btn" type="button">⚙️</button>
+    <button id="accountBtn" class="account-btn" type="button">👤</button>
+
+    <!-- Overlay для панелей -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Панель налаштувань -->
+    <div id="settingsPanel" class="settings-panel">
+      <div class="settings-header"><h2>Налаштування</h2></div>
+      <div class="settings-content">
+        <a href="">Профіль</a>
+        <a href="">Конфіденційність</a>
+        <a href="./index.html" onclick="logout()">Вийти</a>
+      </div>
+    </div>
+
+    <!-- Панель акаунту -->
+    <div id="accountPanel" class="account-panel">
+      <div class="account-header"><h2>Акаунт</h2></div>
+      <div class="account-content">
+        <div class="user-info">
+          <div class="user-avatar">👤</div>
+          <div class="user-details">
+            <div class="user-name">Користувач</div>
+            <div class="user-email">user@example.com</div>
+          </div>
+        </div>
+        <div class="account-stats">
+          <div class="stat-item">
+            <span class="stat-label">Всього транзакцій:</span>
+            <span class="stat-value" id="totalTransactions">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Дата реєстрації:</span>
+            <span class="stat-value" id="registrationDate">01.01.2024</span>
+          </div>
+        </div>
+        <div class="account-actions">
+          <a href="./profile.html" class="account-link"
+            >📝 Редагувати профіль</a
+          >
+          <a href="./security.html" class="account-link">🔐 Безпека</a>
+          <a href="./premium.html" class="account-link premium">⭐ Преміум</a>
+          <a href="#" class="account-link logout" onclick="logout()"
+            >🚪 Вийти</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Заголовок і верхні елементи -->
+    <div class="top-text">
+      <h1>ФінТ</h1>
+
+      <!-- Блок Тестування -->
+      <a href="Hub.html" class="level-box" id="testBox">
+        <span class="level-number">Тестування</span>
+        <div class="level-bar">
+          <div
+            id="testProgress"
+            class="level-progress-inner"
+            style="width: 0%"
+          ></div>
+        </div>
+      </a>
+
+      <!-- Навігація по сторінках -->
+      <nav class="page-nav">
+        <a href="./about.html">Графіки</a>
+      </nav>
+    </div>
+
+    <!-- Основний вміст -->
+    <main>
+      <div class="circle-wrapper">
+        <!-- Ліва колонка: Витрати -->
+        <div class="column left-column">
+          <h3>Витрати</h3>
+          <div class="column-total">Сума: <span id="leftTotal">0</span></div>
+          <div class="column-progress">
+            <div id="leftProgress" class="column-progress-inner"></div>
+          </div>
+          <ul id="leftList" class="entries-list"></ul>
+        </div>
+
+        <!-- Кругова візуалізація -->
+        <div class="circle-container">
+          <div class="circle">
+            <svg width="240" height="240" viewBox="0 0 200 200">
+              <circle class="circle-track" cx="100" cy="100" r="90" />
+              <circle class="circle-progress" cx="100" cy="100" r="90" />
+            </svg>
+            <!-- Цифри балансу -->
+            <span id="digits">000000</span>
+          </div>
+          <div class="buttons">
+            <button id="expensesBtn" type="button">Внести витрати</button>
+            <button id="incomeBtn" type="button">Внести доходи</button>
+          </div>
+        </div>
+
+        <!-- Права колонка: Доходи -->
+        <div class="column right-column">
+          <h3>Доходи</h3>
+          <div class="column-total">Сума: <span id="rightTotal">0</span></div>
+          <div class="column-progress">
+            <div id="rightProgress" class="column-progress-inner"></div>
+          </div>
+          <ul id="rightList" class="entries-list"></ul>
+        </div>
+      </div>
+
+      <!-- Курси валют -->
+      <div class="exchange-rates">
+        <h3>Курси валют</h3>
+        <div class="rates-container">
+          <div class="rate-card">
+            <div class="currency-pair">USD/UAH</div>
+            <div id="usdRate" class="rate-value">--.--</div>
+            <div id="usdChange" class="rate-change">...</div>
+          </div>
+          <div class="rate-card">
+            <div class="currency-pair">EUR/UAH</div>
+            <div id="eurRate" class="rate-value">--.--</div>
+            <div id="eurChange" class="rate-change">...</div>
+          </div>
+        </div>
+        <div class="rates-update">
+          Оновлено: <span id="lastUpdate">--:--</span>
+        </div>
+      </div>
+
+      <!-- Панель введення -->
+      <div id="inputPanel" class="input-panel hidden" role="dialog">
+        <div class="input-inner">
+          <div class="panel-header">
+            <div id="panelTitle" class="panel-title">Ввести суми</div>
+            <div class="panel-circle-value">
+              Коло: <span id="panelCircleValue">0</span>
+            </div>
+            <div class="panel-preview">
+              Попередній перегляд: <span id="panelPreviewTotal">0</span>
+            </div>
+          </div>
+          <textarea
+            id="amountInput"
+            placeholder="Введіть числа..."
+            rows="4"
+          ></textarea>
+          <div class="panel-actions">
+            <button id="confirmBtn" type="button">Підтвердити</button>
+            <button id="cancelBtn" type="button">Скасувати</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./combined.js"></script>
+  </body>
+</html>

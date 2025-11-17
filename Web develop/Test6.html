@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Питання -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="в">
+            Яка основна функція фінансової системи в економіці країни?
+            <ul>
+              <li data-option="а">Визначення рівня інфляції</li>
+              <li data-option="б">Стягнення податків із населення</li>
+              <li data-option="в">
+                Передача коштів від тих, хто має надлишки (нетто-кредиторів), до
+                тих, хто їх потребує (нетто-позичальників)
+              </li>
+              <li data-option="г">
+                Започаткування та розвиток бізнесу підприємств
+              </li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Як називаються юридичні особи, винятковим видом діяльності яких є
+            надання, переважно, окремої однієї фінансової послуги (наприклад,
+            кредитні спілки, ломбарди)?
+            <ul>
+              <li data-option="а">Банки</li>
+              <li data-option="б">Фінансові регулятори</li>
+              <li data-option="в">Небанківські фінансові установи</li>
+              <li data-option="г">Нетто-кредитори</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що таке Капітал з точки зору фінансової системи?
+            <ul>
+              <li data-option="а">Гроші, які сплачують державі як податки</li>
+              <li data-option="б">Сукупність фінансових регуляторів</li>
+              <li data-option="в">
+                Гроші й інші активи, які використовують для започаткування та
+                розвитку бізнесу з метою отримання прибутку
+              </li>
+              <li data-option="г">
+                Гроші, отримані в результаті відмивання коштів
+              </li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Яка форма представлення фінансової послуги на ринку?
+            <ul>
+              <li data-option="а">Фінансовий посередник</li>
+              <li data-option="б">Ліцензія</li>
+              <li data-option="в">Фінансовий продукт</li>
+              <li data-option="г">Відмивання коштів</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що з переліченого є одним зі шляхів (способів) регулювання
+            діяльності фінансових посередників?
+            <ul>
+              <li data-option="а">Визначення нетто-кредиторів</li>
+              <li data-option="б">
+                Надання виключно однієї фінансової послуги
+              </li>
+              <li data-option="в">Гарантування вкладів (депозитів)</li>
+              <li data-option="г">Маскування незаконного походження коштів</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>

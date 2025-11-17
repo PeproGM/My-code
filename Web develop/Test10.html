@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="Test1.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="logo">TH</div>
+          <div>
+            <h1 class="brand__title">Тест</h1>
+          </div>
+        </div>
+      </header>
+
+      <!-- Таймер -->
+      <div class="timer">Час залишився: <span id="timer">10:00</span></div>
+
+      <!-- Питання -->
+      <div class="panel">
+        <ol class="test-questions">
+          <li data-answer="б">
+            Яка з перелічених дій є формою заощадження, коли кошти передаються
+            фінансовій установі на зберігання з обіцянкою повернення з
+            процентами?
+            <ul>
+              <li data-option="а">Інвестиція</li>
+              <li data-option="б">Розміщення депозиту (вкладу)</li>
+              <li data-option="в">Оплата мобільним гаманцем</li>
+              <li data-option="г">Відкриття кореспондентського рахунку</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Яка фінансова установа гарантує повернення банківських депозитів
+            фізичних осіб в Україні?
+            <ul>
+              <li data-option="а">Національний банк України (НБУ)</li>
+              <li data-option="б">Комерційний банк</li>
+              <li data-option="в">Фонд гарантування вкладів фізичних осіб</li>
+              <li data-option="г">Кредитна спілка</li>
+            </ul>
+          </li>
+          <li data-answer="б">
+            Що таке інвестиції?
+            <ul>
+              <li data-option="а">
+                Відкладення грошей для використання їх у майбутньому
+              </li>
+              <li data-option="б">
+                Витрата грошей зараз на придбання певних активів із метою
+                отримання доходу в майбутньому
+              </li>
+              <li data-option="в">Сплата податків на доходи фізичних осіб</li>
+              <li data-option="г">Придбання валюти на міжбанківському ринку</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Що з переліченого не впливає на розрахунок процентного доходу за
+            депозитом?
+            <ul>
+              <li data-option="а">Строк депозиту</li>
+              <li data-option="б">Розмір процентної ставки</li>
+              <li data-option="в">Ліквідність активів банку</li>
+              <li data-option="г">Метод нарахування процентів</li>
+            </ul>
+          </li>
+          <li data-answer="в">
+            Який із перелічених депозитів не підлягає відшкодуванню Фондом
+            гарантування вкладів фізичних осіб?
+            <ul>
+              <li data-option="а">Строкові гривневі депозити</li>
+              <li data-option="б">Депозити на вимогу</li>
+              <li data-option="в">Металеві депозити</li>
+              <li data-option="г">Валютні депозити фізичних осіб</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Кнопка завершення тесту -->
+      <div class="panel">
+        <button id="finishTest">Завершити тест</button>
+      </div>
+    </div>
+
+    <script src="Test1.js" defer></script>
+  </body>
+</html>
